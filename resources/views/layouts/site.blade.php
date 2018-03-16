@@ -445,4 +445,3 @@
 <script type="text/javascript" src="{{ asset('assets/js/custom.js')}}"></script>
 
 </body>
-</html>
