@@ -261,6 +261,6 @@
         </section>
     </div>
     <div class="container">
-        <div class="footer_bottom"><span>Copyright \A9 2014,    Template by <a href="http://webthemez.com">WebThemez.com</a>. </span> </div>
+        <div class="footer_bottom"><span>Copyright  2018,    Template by <a href="http://webthemez.com">WebThemez.com</a>. </span> </div>
     </div>
 </footer>
