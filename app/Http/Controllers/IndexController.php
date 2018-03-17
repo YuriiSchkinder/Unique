@@ -3,15 +3,50 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+use App\Http\Requests;
+
 use App\Page;
 use App\Service;
-use App\People;
 use App\Portfolio;
+use App\People;
+
+use Mail;
+
 use DB;
 
 class IndexController extends Controller
 {
+
+
     public function execute(Request $request){
+
+        if($request->isMethod('post')) {
+
+            $messages = [
+
+                'required' => "Поле :attribute обязательно к заполнению",
+                'email' => "Поле :attribute должно соответствовать email адресу"
+
+            ];
+
+            $this->validate($request,[
+
+                'name' => 'required|max:255',
+                'email' => 'required|email',
+                'text' => 'required'
+
+            ], $messages);
+
+
+
+                return redirect()->route('home')->with('status', 'Email is send');
+
+
+
+
+        }
+
         $pages= Page::all();
         $services=Service::where('id','<',20)->get();
         $peoples=People::take(3)->get();
