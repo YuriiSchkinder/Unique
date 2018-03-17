@@ -20,6 +20,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "bootstrap-filestyle": "^1.2.1",
         "ckeditor": "^4.9.0"
     }
 }

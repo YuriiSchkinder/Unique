@@ -43,5 +43,5 @@
         </table>
 
     @endif
-    {!! Html::link(route('pageAdd'),'Новая страница') !!}
+    {!! Html::link(route('pagesAdd'),'Новая страница') !!}
 </div>
