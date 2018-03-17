@@ -20,7 +20,8 @@ Route::group([],function (){
 
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
     Route::get('/',function (){
-
+        $data=['title'=>'Панель адміна'];
+        return view('admin.index',$data);
     });
     Route::group(['prefix'=>'pages'],function (){
 
@@ -46,3 +47,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
 
     });
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
